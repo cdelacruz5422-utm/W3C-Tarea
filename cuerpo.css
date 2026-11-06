@@ -1,0 +1,201 @@
+/* Colores del tema */
+:root {
+    --fondo: #0d1b2a;
+    --panel: #163353;
+    --panel-claro: #1b497a;
+    --cian: #29d0f0;
+    --cian-suave: #8fe3f6;
+    --coral: #5afcff;
+    --texto: #e6eef5;
+    --texto-suave: #a9bccd;
+}
+
+/* Estilo general */
+body {
+    margin: 0;
+    font-family: "Source Sans 3", Arial, sans-serif;
+    font-size: 18px;
+    line-height: 1.6;
+    background-color: var(--fondo);
+    color: var(--texto);
+}
+
+h1, h2, h3 {
+    font-family: "Sora", Arial, sans-serif;
+}
+
+/* imagen de fondo */
+header {
+    background-image:
+        linear-gradient(180deg, rgba(13, 27, 42, 0.55) 0%, rgba(13, 27, 42, 0.92) 100%),
+        url("imagenes/tecnologia.jpg");
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    padding: 110px 20px 90px;
+}
+
+.portada {
+    max-width: 760px;
+    margin: 0 auto;
+}
+
+header h1 {
+    font-size: clamp(30px, 6vw, 52px);
+    line-height: 1.15;
+    margin: 0 0 14px;
+    color: #fff;
+}
+
+header p {
+    font-size: 20px;
+    margin: 0;
+    color: var(--cian-suave);
+}
+
+/* Menú */
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background-color: #0a1520;
+    border-bottom: 2px solid var(--cian);
+    text-align: center;
+    padding: 14px;
+}
+
+nav a {
+    color: var(--texto);
+    text-decoration: none;
+    margin: 0 14px;
+    font-weight: 600;
+}
+
+nav a:hover,
+nav a:focus-visible {
+    color: var(--cian);
+    outline: none;
+}
+
+/* Secciones */
+section {
+    background-color: var(--panel);
+    width: 80%;
+    max-width: 960px;
+    margin: 30px auto;
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid var(--panel-claro);
+    box-sizing: border-box;
+}
+
+section h2 {
+    color: var(--cian);
+    border-bottom: 2px solid var(--coral);
+    padding-bottom: 10px;
+    margin-top: 0;
+}
+
+section p {
+    max-width: 70ch;
+}
+
+/* Imagen de la sección de inicio */
+section img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin: 20px 0 24px;
+}
+
+/* Tarjetas */
+.tarjetas {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.tarjeta {
+    background-color: var(--panel-claro);
+    padding: 20px;
+    flex: 1 1 200px;
+    text-align: center;
+    border-radius: 10px;
+    border-top: 4px solid var(--cian);
+}
+
+.tarjeta h3 {
+    color: var(--cian-suave);
+    margin-top: 0;
+}
+
+.tarjeta p {
+    margin: 0 auto;
+    color: var(--texto-suave);
+}
+
+/* Listas */
+li {
+    margin: 12px 0;
+}
+
+li::marker {
+    color: var(--coral);
+    font-weight: 700;
+}
+
+/* Enlaces a las páginas de cada tema */
+section a,
+.tarjeta h3 a {
+    color: var(--cian);
+    text-decoration: underline;
+    text-decoration-color: var(--coral);
+    text-underline-offset: 4px;
+    text-decoration-thickness: 2px;
+    font-weight: 600;
+}
+
+section a:hover,
+section a:focus-visible,
+.tarjeta h3 a:hover {
+    color: #fff;
+    text-decoration-color: var(--cian);
+}
+
+.tarjeta h3 a {
+    color: var(--cian-suave);
+}
+
+/* Páginas de cada tema */
+.encabezado-tema {
+    padding: 70px 20px 60px;
+}
+
+.nota {
+    margin-top: 24px;
+    padding: 14px 18px;
+    background-color: var(--panel-claro);
+    border-left: 4px solid var(--coral);
+    border-radius: 6px;
+    color: var(--texto-suave);
+}
+
+.volver {
+    display: inline-block;
+    margin-top: 10px;
+}
+
+/*  Funciona Para Pantallas pequeñas */
+@media (max-width: 700px) {
+    section {
+        width: 92%;
+        padding: 22px;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 4px 10px;
+    }
+}
