@@ -1,27 +1,29 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Innovación | La Tecnología en Nuestra Vida</title>
     <link rel="stylesheet" href="../cuerpo.css">
+    <script src="../js/app.js" defer></script>
 </head>
 <body>
-
+    <a class="salto" href="#contenido">Ir al contenido principal</a>
     <header class="encabezado-tema">
         <div class="portada">
             <h1>Innovación</h1>
             <p>Nuevas ideas que mejoran la vida</p>
         </div>
     </header>
-
-    <nav>
-        <a href="../Inicio.html">Inicio</a>
-        <a href="../Inicio.html#importancia">Importancia</a>
-        <a href="../Inicio.html#problemas">Retos</a>
-        <a href="../Inicio.html">Buenas prácticas</a>
+    <nav aria-label="Principal">
+        <a href="../index.html">Inicio</a>
+        <a href="../index.html#importancia">Importancia</a>
+        <a href="../index.html#problemas">Retos</a>
+        <a href="../index.html#soluciones">Buenas prácticas</a>
+        <a href="../contacto.html">Contacto</a>
     </nav>
 
+    <main id="contenido" tabindex="-1">
     <section>
         <h2>Información</h2>
         <p>La innovación tecnológica es la creación de nuevas herramientas y soluciones que mejoran la forma en que vivimos y trabajamos.</p>
@@ -37,7 +39,12 @@
             <li>Energías limpias y tecnología sostenible.</li>
             <li>Medicina digital y telemedicina.</li>
         </ul>
-        <a class="volver" href="../Inicio.html">← Volver al inicio</a>
+        <a class="volver" href="../index.html"><span aria-hidden="true">← </span>Volver al inicio</a>
     </section>
+    </main>
+
+    <footer>
+        <p>2026 La Tecnología en Nuestra Vida. Proyecto del curso de HTML, CSS y JavaScript.</p>
+    </footer>
 </body>
 </html>
