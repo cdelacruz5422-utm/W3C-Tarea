@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Contacto | La Tecnología en Nuestra Vida</title>
+    <link rel="stylesheet" href="cuerpo.css">
+    <script src="js/app.js" defer></script>
+</head>
+<body>
+    <a class="salto" href="#contenido">Ir al contenido principal</a>
+    <header class="encabezado-tema">
+        <div class="portada">
+            <h1>Contacto</h1>
+            <p>Cuéntanos tu duda o sugerencia</p>
+        </div>
+    </header>
+    <nav aria-label="Principal">
+        <a href="index.html">Inicio</a>
+        <a href="index.html#importancia">Importancia</a>
+        <a href="index.html#problemas">Retos</a>
+        <a href="index.html#soluciones">Buenas prácticas</a>
+        <a href="contacto.html" aria-current="page">Contacto</a>
+    </nav>
+
+    <main id="contenido" tabindex="-1">
+    <section>
+        <h2>Envíanos un mensaje</h2>
+        <p>Todos los campos son obligatorios.</p>
+        <div id="resumen" class="resumen" role="alert" tabindex="-1" hidden></div>
+        <form id="formulario">
+            <div class="campo">
+                <label for="nombre">Nombre completo</label>
+                <input type="text" id="nombre" name="nombre" autocomplete="name" required aria-describedby="error-nombre">
+                <p class="error" id="error-nombre"></p>
+            </div>
+            <div class="campo">
+                <label for="correo">Correo electrónico</label>
+                <input type="email" id="correo" name="correo" autocomplete="email" required aria-describedby="error-correo">
+                <p class="error" id="error-correo"></p>
+            </div>
+            <div class="campo">
+                <label for="tema">Tema de tu mensaje</label>
+                <select id="tema" name="tema" required aria-describedby="error-tema">
+                    <option value="">Selecciona un tema</option>
+                    <option>Comunicación</option>
+                    <option>Educación</option>
+                    <option>Innovación</option>
+                    <option>Seguridad y privacidad</option>
+                    <option>Desinformación</option>
+                    <option>Ciberacoso</option>
+                    <option>Otro tema</option>
+                </select>
+                <p class="error" id="error-tema"></p>
+            </div>
+            <div class="campo">
+                <label for="mensaje">Mensaje (minimo 10 caracteres)</label>
+                <textarea id="mensaje" name="mensaje" rows="5" required minlength="10" aria-describedby="error-mensaje"></textarea>
+                <p class="error" id="error-mensaje"></p>
+            </div>
+            <button type="submit">Enviar mensaje</button>
+        </form>
+        <p id="exito" class="exito" role="status" hidden></p>
+    </section>
+    </main>
+
+    <footer>
+        <p>2026 La Tecnología en Nuestra Vida. Proyecto del curso de HTML, CSS y JavaScript.</p>
+    </footer>
+</body>
+</html>
